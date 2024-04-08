@@ -1,0 +1,26 @@
+<div class="drawer">
+  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Page content here -->
+    <ng-content></ng-content>
+    <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+      <!-- Sidebar content here -->
+      <li><a (click)="runToast('top-left','My toast is on the top-left position','success')">top-left position</a></li>
+      <li><a (click)="runToast('top-center','My toast is on the top-center position','warning')">top-center position</a></li>
+      <li><a (click)="runToast('top-right','My toast is on the top-right position','info')">top-right position</a></li>
+      <li><a (click)="runToast('middle-left','My toast is on the middle-left position','error')">middle-left position</a></li>
+      <li><a (click)="runToast('middle-center','My toast is on the middle-center position')">middle-center position</a></li>
+      <li><a (click)="runToast('middle-right','My toast is on the middle-right position')">middle-right position</a></li>
+      <li><a (click)="runToast('bottom-left','My toast is on the bottom-left position')">bottom-left position</a></li>
+      <li><a (click)="runToast('bottom-center','My toast is on the bottom-center position')">bottom-center position</a></li>
+      <li><a (click)="runToast('bottom-right','My toast is on the bottom-right position')">bottom-right position</a></li>
+
+    </ul>
+  </div>
+</div>
+
+<ToasterWrapper></ToasterWrapper>
